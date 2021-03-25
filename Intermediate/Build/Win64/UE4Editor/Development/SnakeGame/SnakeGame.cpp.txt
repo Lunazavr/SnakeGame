@@ -1,0 +1,2 @@
+C:\Users\lunas\source\repos\Modul20\SnakeGame\Intermediate\Build\Win64\UE4Editor\Development\SnakeGame\Definitions.SnakeGame.h
+C:\Users\lunas\source\repos\Modul20\SnakeGame\Source\SnakeGame\SnakeGame.h

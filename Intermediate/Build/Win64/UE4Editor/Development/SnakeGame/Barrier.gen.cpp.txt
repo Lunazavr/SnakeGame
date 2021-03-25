@@ -1,0 +1,7 @@
+C:\Users\lunas\source\repos\Modul20\SnakeGame\Intermediate\Build\Win64\UE4Editor\Development\SnakeGame\Definitions.SnakeGame.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\lunas\source\repos\Modul20\SnakeGame\Source\SnakeGame/Barrier.h
+C:\Users\lunas\source\repos\Modul20\SnakeGame\Source\SnakeGame\Interactable.h
+C:\Users\lunas\source\repos\Modul20\SnakeGame\Intermediate\Build\Win64\UE4Editor\Inc\SnakeGame\Interactable.generated.h
+C:\Users\lunas\source\repos\Modul20\SnakeGame\Intermediate\Build\Win64\UE4Editor\Inc\SnakeGame\Barrier.generated.h

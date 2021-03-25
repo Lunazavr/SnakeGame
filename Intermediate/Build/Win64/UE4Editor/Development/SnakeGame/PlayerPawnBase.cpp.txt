@@ -1,0 +1,7 @@
+C:\Users\lunas\source\repos\Modul20\SnakeGame\Intermediate\Build\Win64\UE4Editor\Development\SnakeGame\Definitions.SnakeGame.h
+C:\Users\lunas\source\repos\Modul20\SnakeGame\Source\SnakeGame\PlayerPawnBase.h
+C:\Users\lunas\source\repos\Modul20\SnakeGame\Intermediate\Build\Win64\UE4Editor\Inc\SnakeGame\PlayerPawnBase.generated.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine/Classes/Camera/CameraComponent.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
+C:\Users\lunas\source\repos\Modul20\SnakeGame\Source\SnakeGame\SnakeBase.h
+C:\Users\lunas\source\repos\Modul20\SnakeGame\Intermediate\Build\Win64\UE4Editor\Inc\SnakeGame\SnakeBase.generated.h

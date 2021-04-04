@@ -463,6 +463,10 @@
     <NMakeOutput>..\..\Binaries\HTML5\SnakeGame-HTML5-Shipping.js</NMakeOutput>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\SnakeGame\SuperFoodBP.cpp" />
+    <ClCompile Include="..\..\Source\SnakeGame\WidgetCounter.cpp" />
+    <ClInclude Include="..\..\Source\SnakeGame\SuperFoodBP.h" />
+    <ClInclude Include="..\..\Source\SnakeGame\WidgetCounter.h" />
     <None Include="..\..\SnakeGame.uproject" />
     <None Include="..\..\Source\SnakeGame.Target.cs" />
     <None Include="..\..\Source\SnakeGameEditor.Target.cs" />

@@ -61,6 +61,12 @@
     <ClInclude Include="..\..\Source\SnakeGame\Barrier.h">
       <Filter>Source\SnakeGame</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\SnakeGame\SuperFoodBP.h">
+      <Filter>Source\SnakeGame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SnakeGame\WidgetCounter.h">
+      <Filter>Source\SnakeGame</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\SnakeGame\PlayerPawnBase.cpp">
@@ -79,6 +85,12 @@
       <Filter>Source\SnakeGame</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\SnakeGame\Barrier.cpp">
+      <Filter>Source\SnakeGame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SnakeGame\SuperFoodBP.cpp">
+      <Filter>Source\SnakeGame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SnakeGame\WidgetCounter.cpp">
       <Filter>Source\SnakeGame</Filter>
     </ClCompile>
   </ItemGroup>

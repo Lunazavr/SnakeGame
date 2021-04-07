@@ -44,4 +44,11 @@ public:
 		void HandlePlayerVerticalInput(float value);
 	UFUNCTION()
 		void HandlePlayerHorizontalInput(float value);
+
+	// Диапазон создания еды
+	float MinY = -500.f; float MaxY = 500.f;
+	float MinX = -500.f; float MaxX = 500.f;
+	float SpawnZ = 50.f;
+
+	void AddRandomFood();
 };

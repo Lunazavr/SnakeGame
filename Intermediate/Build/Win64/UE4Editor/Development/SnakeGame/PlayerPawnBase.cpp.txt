@@ -5,3 +5,7 @@ C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine/Classes/Camera/
 C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
 C:\Users\lunas\source\repos\Modul20\SnakeGame\Source\SnakeGame\SnakeBase.h
 C:\Users\lunas\source\repos\Modul20\SnakeGame\Intermediate\Build\Win64\UE4Editor\Inc\SnakeGame\SnakeBase.generated.h
+C:\Users\lunas\source\repos\Modul20\SnakeGame\Source\SnakeGame\Food.h
+C:\Users\lunas\source\repos\Modul20\SnakeGame\Source\SnakeGame\Interactable.h
+C:\Users\lunas\source\repos\Modul20\SnakeGame\Intermediate\Build\Win64\UE4Editor\Inc\SnakeGame\Interactable.generated.h
+C:\Users\lunas\source\repos\Modul20\SnakeGame\Intermediate\Build\Win64\UE4Editor\Inc\SnakeGame\Food.generated.h

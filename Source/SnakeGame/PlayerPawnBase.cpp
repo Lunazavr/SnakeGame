@@ -5,6 +5,7 @@
 #include "Engine/Classes/Camera/CameraComponent.h"
 #include "SnakeBase.h"
 #include "Components/InputComponent.h"
+#include "Food.h"
 
 // Sets default values
 APlayerPawnBase::APlayerPawnBase()
@@ -29,6 +30,7 @@ void APlayerPawnBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	AddRandomFood();
 }
 
 // Called to bind functionality to input
@@ -72,6 +74,23 @@ void APlayerPawnBase::HandlePlayerHorizontalInput(float value)
 		else if (value < 0 && SnakeActor->LastMoveDirection != EMovementDirection::RIGHT)
 		{
 			SnakeActor->LastMoveDirection = EMovementDirection::LEFT;
+		}
+	}
+}
+
+void APlayerPawnBase::AddRandomFood()
+{
+	FRotator StartPointRotation = FRotator(0, 0, 0); // угол вращения еды
+	float SpawnX = FMath::FRandRange(MinX, MaxX); // случайная точка по Х
+	float SpawnY = FMath::FRandRange(MinY, MaxY); // случайная точка по Y
+
+	FVector StartPoint = FVector(SpawnX, SpawnY, SpawnZ);
+
+	if (SnakeActor)
+	{
+		if (GetWorld())
+		{
+			GetWorld()->SpawnActor<AFood>(StartPoint, StartPointRotation);
 		}
 	}
 }

@@ -46,8 +46,8 @@ public:
 		void HandlePlayerHorizontalInput(float value);
 
 	// Диапазон создания еды
-	float MinY = -500.f; float MaxY = 500.f;
-	float MinX = -500.f; float MaxX = 500.f;
+	float MinY = 0.f; float MaxY = 1000.f;
+	float MinX = -1000.f; float MaxX = 1000.f;
 	float SpawnZ = 50.f;
 
 	void AddRandomFood();

@@ -29,8 +29,12 @@ void APlayerPawnBase::BeginPlay()
 void APlayerPawnBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	AddRandomFood();
+	BuferTime += DeltaTime;
+	if (BuferTime > StepDelay)
+	{
+		AddRandomFood();
+		BuferTime = 0;
+	}
 }
 
 // Called to bind functionality to input

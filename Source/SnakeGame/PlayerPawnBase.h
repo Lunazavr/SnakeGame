@@ -51,4 +51,7 @@ public:
 	float SpawnZ = 50.f;
 
 	void AddRandomFood();
+
+	float StepDelay = 1.f;
+	float BuferTime = 0;
 };

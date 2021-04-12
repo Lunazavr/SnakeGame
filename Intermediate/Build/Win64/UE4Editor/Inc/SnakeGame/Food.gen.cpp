@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeFood() {}
 	SNAKEGAME_API UClass* Z_Construct_UClass_AFood();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_SnakeGame();
+	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	SNAKEGAME_API UClass* Z_Construct_UClass_UInteractable_NoRegister();
 // End Cross Module References
 	void AFood::StaticRegisterNativesAFood()
@@ -32,6 +33,11 @@ void EmptyLinkFunctionForGeneratedCodeFood() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MeshComponent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MeshComponent;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -46,6 +52,17 @@ void EmptyLinkFunctionForGeneratedCodeFood() {}
 		{ "ModuleRelativePath", "Food.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFood_Statics::NewProp_MeshComponent_MetaData[] = {
+		{ "Category", "Food" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Food.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFood_Statics::NewProp_MeshComponent = { "MeshComponent", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFood, MeshComponent), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFood_Statics::NewProp_MeshComponent_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFood_Statics::NewProp_MeshComponent_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFood_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFood_Statics::NewProp_MeshComponent,
+	};
 		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AFood_Statics::InterfaceParams[] = {
 			{ Z_Construct_UClass_UInteractable_NoRegister, (int32)VTABLE_OFFSET(AFood, IInteractable), false },
 		};
@@ -58,11 +75,11 @@ void EmptyLinkFunctionForGeneratedCodeFood() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_AFood_Statics::PropPointers,
 		InterfaceParams,
 		ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		ARRAY_COUNT(Z_Construct_UClass_AFood_Statics::PropPointers),
 		ARRAY_COUNT(InterfaceParams),
 		0x009000A0u,
 		METADATA_PARAMS(Z_Construct_UClass_AFood_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_AFood_Statics::Class_MetaDataParams))
@@ -76,7 +93,7 @@ void EmptyLinkFunctionForGeneratedCodeFood() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFood, 4067408985);
+	IMPLEMENT_CLASS(AFood, 2537859724);
 	template<> SNAKEGAME_API UClass* StaticClass<AFood>()
 	{
 		return AFood::StaticClass();

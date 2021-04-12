@@ -1,4 +1,5 @@
 // Fill out your copyright notice in the Description page of Project Settings.
+// —татична€ камера, кот смотрит вниз на игровое поле
 
 
 #include "PlayerPawnBase.h"
@@ -23,12 +24,14 @@ void APlayerPawnBase::BeginPlay()
 	Super::BeginPlay();
 	SetActorRotation(FRotator(-90, 0, 0));
 	CreateSnakeActor();
+	CreateFoodActor();
 }
 
 // Called every frame
 void APlayerPawnBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	GetWorld()->SpawnActor<AFood>(FoodActorClass, GetActorTransform());
 	BuferTime += DeltaTime;
 	if (BuferTime > StepDelay)
 	{
@@ -50,6 +53,11 @@ void APlayerPawnBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 void APlayerPawnBase::CreateSnakeActor()
 {
 	SnakeActor = GetWorld()->SpawnActor<ASnakeBase>(SnakeActorClass, FTransform());
+}
+
+void APlayerPawnBase::CreateFoodActor()
+{
+	FoodActor = GetWorld()->SpawnActor<AFood>(FoodActorClass, FTransform());
 }
 
 void APlayerPawnBase::HandlePlayerVerticalInput(float value)

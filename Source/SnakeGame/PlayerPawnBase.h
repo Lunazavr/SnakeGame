@@ -8,6 +8,7 @@
 
 class UCameraComponent;
 class ASnakeBase;
+class AFood;
 
 UCLASS()
 class SNAKEGAME_API APlayerPawnBase : public APawn
@@ -27,6 +28,12 @@ public:
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<ASnakeBase> SnakeActorClass; // создали переменную класса змейки
 
+	UPROPERTY(BlueprintReadWrite)
+	AFood* FoodActor;
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<AFood> FoodActorClass;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -40,6 +47,8 @@ public:
 
 	void CreateSnakeActor();
 
+	void CreateFoodActor();
+
 	UFUNCTION()
 		void HandlePlayerVerticalInput(float value);
 	UFUNCTION()
@@ -48,7 +57,7 @@ public:
 	// Диапазон создания еды
 	float MinY = 0.f; float MaxY = 1000.f;
 	float MinX = -1000.f; float MaxX = 1000.f;
-	float SpawnZ = 50.f;
+	float SpawnZ = 60.f;
 
 	void AddRandomFood();
 

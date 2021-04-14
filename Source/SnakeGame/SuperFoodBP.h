@@ -7,6 +7,8 @@
 #include "Interactable.h"
 #include "SuperFoodBP.generated.h"
 
+class UStaticMeshComponent;
+
 UCLASS()
 class SNAKEGAME_API ASuperFoodBP : public AActor, public IInteractable
 {
@@ -15,6 +17,9 @@ class SNAKEGAME_API ASuperFoodBP : public AActor, public IInteractable
 public:	
 	// Sets default values for this actor's properties
 	ASuperFoodBP();
+
+	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly)
+	UStaticMeshComponent* MeshComponent;
 
 protected:
 	// Called when the game starts or when spawned
@@ -26,4 +31,6 @@ public:
 
 	virtual void Interact(AActor* Interactor, bool bIsHead) override;
 
+	float StepDelaySF = 2.0f; // задержка до исчезновения
+	float BuferTimeSF = 0; // накопитель времени
 };

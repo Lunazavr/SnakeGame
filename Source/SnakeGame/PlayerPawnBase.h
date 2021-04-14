@@ -9,6 +9,7 @@
 class UCameraComponent;
 class ASnakeBase;
 class AFood;
+class ASuperFoodBP;
 
 UCLASS()
 class SNAKEGAME_API APlayerPawnBase : public APawn
@@ -34,6 +35,12 @@ public:
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<AFood> FoodActorClass;
 
+	UPROPERTY(BlueprintReadWrite)
+	ASuperFoodBP* SuperFoodBPActor;
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<ASuperFoodBP> SuperFoodBPActorClass;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -49,18 +56,35 @@ public:
 
 	void CreateFoodActor();
 
+	void CreateSuperFoodBPActor();
+
 	UFUNCTION()
 		void HandlePlayerVerticalInput(float value);
 	UFUNCTION()
 		void HandlePlayerHorizontalInput(float value);
 
 	// Диапазон создания еды
-	float MinY = 0.f; float MaxY = 1000.f;
-	float MinX = -1000.f; float MaxX = 1000.f;
+	float MinY = -1420.f; float MaxY = 1420.f;
+	float MinX = -420.f; float MaxX = 1420.f;
 	float SpawnZ = 60.f;
 
 	void AddRandomFood();
 
-	float StepDelay = 1.f;
-	float BuferTime = 0;
+	float StepDelay = 1.0f; // задержка при движении
+	float BuferTime = 0; // накопитель времени
+
+	void AddRandomSuperFoodBP();
+
+	float StepDelaySF = 5.0f; // задержка при движении
+	float BuferTimeSF = 0; // накопитель времени
+
+	//int GameMode = 0; // переменная режима игры
+	//UFUNCTION(BlueprintCallable, Category = "SnakePawn")
+	//int GetGameMode() const
+	//{
+	//	return GameMode;
+	//}
+
+	UFUNCTION(BlueprintCallable, Category = "SnakePawn")
+		int GetScore();
 };

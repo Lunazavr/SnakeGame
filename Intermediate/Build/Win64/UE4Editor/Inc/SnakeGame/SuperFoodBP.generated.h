@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SNAKEGAME_SuperFoodBP_generated_h
 
-#define SnakeGame_Source_SnakeGame_SuperFoodBP_h_13_RPC_WRAPPERS
-#define SnakeGame_Source_SnakeGame_SuperFoodBP_h_13_RPC_WRAPPERS_NO_PURE_DECLS
-#define SnakeGame_Source_SnakeGame_SuperFoodBP_h_13_INCLASS_NO_PURE_DECLS \
+#define SnakeGame_Source_SnakeGame_SuperFoodBP_h_15_RPC_WRAPPERS
+#define SnakeGame_Source_SnakeGame_SuperFoodBP_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define SnakeGame_Source_SnakeGame_SuperFoodBP_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASuperFoodBP(); \
 	friend struct Z_Construct_UClass_ASuperFoodBP_Statics; \
@@ -25,7 +25,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<ASuperFoodBP*>(this); }
 
 
-#define SnakeGame_Source_SnakeGame_SuperFoodBP_h_13_INCLASS \
+#define SnakeGame_Source_SnakeGame_SuperFoodBP_h_15_INCLASS \
 private: \
 	static void StaticRegisterNativesASuperFoodBP(); \
 	friend struct Z_Construct_UClass_ASuperFoodBP_Statics; \
@@ -35,7 +35,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<ASuperFoodBP*>(this); }
 
 
-#define SnakeGame_Source_SnakeGame_SuperFoodBP_h_13_STANDARD_CONSTRUCTORS \
+#define SnakeGame_Source_SnakeGame_SuperFoodBP_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ASuperFoodBP(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ASuperFoodBP) \
@@ -48,7 +48,7 @@ private: \
 public:
 
 
-#define SnakeGame_Source_SnakeGame_SuperFoodBP_h_13_ENHANCED_CONSTRUCTORS \
+#define SnakeGame_Source_SnakeGame_SuperFoodBP_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ASuperFoodBP(ASuperFoodBP&&); \
@@ -59,26 +59,26 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASuperFoodBP); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ASuperFoodBP)
 
 
-#define SnakeGame_Source_SnakeGame_SuperFoodBP_h_13_PRIVATE_PROPERTY_OFFSET
-#define SnakeGame_Source_SnakeGame_SuperFoodBP_h_10_PROLOG
-#define SnakeGame_Source_SnakeGame_SuperFoodBP_h_13_GENERATED_BODY_LEGACY \
+#define SnakeGame_Source_SnakeGame_SuperFoodBP_h_15_PRIVATE_PROPERTY_OFFSET
+#define SnakeGame_Source_SnakeGame_SuperFoodBP_h_12_PROLOG
+#define SnakeGame_Source_SnakeGame_SuperFoodBP_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SnakeGame_Source_SnakeGame_SuperFoodBP_h_13_PRIVATE_PROPERTY_OFFSET \
-	SnakeGame_Source_SnakeGame_SuperFoodBP_h_13_RPC_WRAPPERS \
-	SnakeGame_Source_SnakeGame_SuperFoodBP_h_13_INCLASS \
-	SnakeGame_Source_SnakeGame_SuperFoodBP_h_13_STANDARD_CONSTRUCTORS \
+	SnakeGame_Source_SnakeGame_SuperFoodBP_h_15_PRIVATE_PROPERTY_OFFSET \
+	SnakeGame_Source_SnakeGame_SuperFoodBP_h_15_RPC_WRAPPERS \
+	SnakeGame_Source_SnakeGame_SuperFoodBP_h_15_INCLASS \
+	SnakeGame_Source_SnakeGame_SuperFoodBP_h_15_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define SnakeGame_Source_SnakeGame_SuperFoodBP_h_13_GENERATED_BODY \
+#define SnakeGame_Source_SnakeGame_SuperFoodBP_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SnakeGame_Source_SnakeGame_SuperFoodBP_h_13_PRIVATE_PROPERTY_OFFSET \
-	SnakeGame_Source_SnakeGame_SuperFoodBP_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	SnakeGame_Source_SnakeGame_SuperFoodBP_h_13_INCLASS_NO_PURE_DECLS \
-	SnakeGame_Source_SnakeGame_SuperFoodBP_h_13_ENHANCED_CONSTRUCTORS \
+	SnakeGame_Source_SnakeGame_SuperFoodBP_h_15_PRIVATE_PROPERTY_OFFSET \
+	SnakeGame_Source_SnakeGame_SuperFoodBP_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	SnakeGame_Source_SnakeGame_SuperFoodBP_h_15_INCLASS_NO_PURE_DECLS \
+	SnakeGame_Source_SnakeGame_SuperFoodBP_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

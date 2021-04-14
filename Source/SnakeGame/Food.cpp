@@ -4,6 +4,7 @@
 #include "Food.h"
 #include "SnakeBase.h"
 #include "Engine/Classes/Components/StaticMeshComponent.h"
+#include "GameFramework/Actor.h"
 
 
 // Sets default values
@@ -25,7 +26,12 @@ void AFood::BeginPlay()
 void AFood::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	BuferTime += DeltaTime; // подсчет количества пройденного времени
 
+	if (BuferTime > StepDelay)
+	{
+		Destroy(true, true);
+	}
 }
 
 void AFood::Interact(AActor* Interactor, bool bIsHead)
@@ -36,6 +42,8 @@ void AFood::Interact(AActor* Interactor, bool bIsHead)
 		if (IsValid(Snake))
 		{
 			Snake->AddSnakeElement();
+			Snake->score++;
+			AFood::Destroy();
 		}
 	}
 }

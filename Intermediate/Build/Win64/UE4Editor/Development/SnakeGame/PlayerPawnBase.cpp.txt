@@ -9,3 +9,5 @@ C:\Users\lunas\source\repos\Modul20\SnakeGame\Source\SnakeGame\Food.h
 C:\Users\lunas\source\repos\Modul20\SnakeGame\Source\SnakeGame\Interactable.h
 C:\Users\lunas\source\repos\Modul20\SnakeGame\Intermediate\Build\Win64\UE4Editor\Inc\SnakeGame\Interactable.generated.h
 C:\Users\lunas\source\repos\Modul20\SnakeGame\Intermediate\Build\Win64\UE4Editor\Inc\SnakeGame\Food.generated.h
+C:\Users\lunas\source\repos\Modul20\SnakeGame\Source\SnakeGame\SuperFoodBP.h
+C:\Users\lunas\source\repos\Modul20\SnakeGame\Intermediate\Build\Win64\UE4Editor\Inc\SnakeGame\SuperFoodBP.generated.h

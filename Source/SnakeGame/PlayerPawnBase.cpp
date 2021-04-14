@@ -7,6 +7,7 @@
 #include "SnakeBase.h"
 #include "Components/InputComponent.h"
 #include "Food.h"
+#include "SuperFoodBP.h"
 
 // Sets default values
 APlayerPawnBase::APlayerPawnBase()
@@ -25,6 +26,7 @@ void APlayerPawnBase::BeginPlay()
 	SetActorRotation(FRotator(-90, 0, 0));
 	CreateSnakeActor();
 	CreateFoodActor();
+	CreateSuperFoodBPActor();
 }
 
 // Called every frame
@@ -32,10 +34,12 @@ void APlayerPawnBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	GetWorld()->SpawnActor<AFood>(FoodActorClass, GetActorTransform());
-	BuferTime += DeltaTime;
+	GetWorld()->SpawnActor<ASuperFoodBP>(SuperFoodBPActorClass, GetActorTransform());
+	BuferTime += (DeltaTime);
 	if (BuferTime > StepDelay)
 	{
 		AddRandomFood();
+		AddRandomSuperFoodBP();
 		BuferTime = 0;
 	}
 }
@@ -53,11 +57,17 @@ void APlayerPawnBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 void APlayerPawnBase::CreateSnakeActor()
 {
 	SnakeActor = GetWorld()->SpawnActor<ASnakeBase>(SnakeActorClass, FTransform());
+
 }
 
 void APlayerPawnBase::CreateFoodActor()
 {
 	FoodActor = GetWorld()->SpawnActor<AFood>(FoodActorClass, FTransform());
+}
+
+void APlayerPawnBase::CreateSuperFoodBPActor()
+{
+	SuperFoodBPActor = GetWorld()->SpawnActor<ASuperFoodBP>(SuperFoodBPActorClass, FTransform());
 }
 
 void APlayerPawnBase::HandlePlayerVerticalInput(float value)
@@ -102,8 +112,34 @@ void APlayerPawnBase::AddRandomFood()
 	{
 		if (GetWorld())
 		{
-			GetWorld()->SpawnActor<AFood>(StartPoint, StartPointRotation);
+			GetWorld()->SpawnActor<AFood>(FoodActorClass, FTransform(StartPointRotation, StartPoint));
 		}
 	}
+}
+
+void APlayerPawnBase::AddRandomSuperFoodBP()
+{
+	FRotator StartPointRotation = FRotator(0, 0, 0); // угол вращения еды
+	float SpawnX = FMath::FRandRange(MinX, MaxX); // случайная точка по Х
+	float SpawnY = FMath::FRandRange(MinY, MaxY); // случайная точка по Y
+
+	FVector StartPoint = FVector(SpawnX, SpawnY, SpawnZ);
+
+	if (SnakeActor)
+	{
+		if (GetWorld())
+		{
+			GetWorld()->SpawnActor<ASuperFoodBP>(SuperFoodBPActorClass, FTransform(StartPointRotation, StartPoint));
+		}
+	}
+}
+
+int APlayerPawnBase::GetScore()
+{
+	if (IsValid(SnakeActor))
+	{
+		return SnakeActor->score;
+	}
+	return 0;
 }
 

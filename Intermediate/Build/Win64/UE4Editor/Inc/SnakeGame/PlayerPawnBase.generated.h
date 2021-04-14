@@ -13,7 +13,15 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SNAKEGAME_PlayerPawnBase_generated_h
 
-#define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_16_RPC_WRAPPERS \
+#define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_17_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execGetScore) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(int32*)Z_Param__Result=P_THIS->GetScore(); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execHandlePlayerHorizontalInput) \
 	{ \
@@ -34,7 +42,15 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+#define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetScore) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(int32*)Z_Param__Result=P_THIS->GetScore(); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execHandlePlayerHorizontalInput) \
 	{ \
@@ -55,7 +71,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_16_INCLASS_NO_PURE_DECLS \
+#define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPlayerPawnBase(); \
 	friend struct Z_Construct_UClass_APlayerPawnBase_Statics; \
@@ -64,7 +80,7 @@ public: \
 	DECLARE_SERIALIZER(APlayerPawnBase)
 
 
-#define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_16_INCLASS \
+#define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_17_INCLASS \
 private: \
 	static void StaticRegisterNativesAPlayerPawnBase(); \
 	friend struct Z_Construct_UClass_APlayerPawnBase_Statics; \
@@ -73,7 +89,7 @@ public: \
 	DECLARE_SERIALIZER(APlayerPawnBase)
 
 
-#define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_16_STANDARD_CONSTRUCTORS \
+#define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_17_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API APlayerPawnBase(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APlayerPawnBase) \
@@ -86,7 +102,7 @@ private: \
 public:
 
 
-#define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_16_ENHANCED_CONSTRUCTORS \
+#define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API APlayerPawnBase(APlayerPawnBase&&); \
@@ -97,26 +113,26 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerPawnBase); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(APlayerPawnBase)
 
 
-#define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_16_PRIVATE_PROPERTY_OFFSET
-#define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_13_PROLOG
-#define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_16_GENERATED_BODY_LEGACY \
+#define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_17_PRIVATE_PROPERTY_OFFSET
+#define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_14_PROLOG
+#define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_17_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SnakeGame_Source_SnakeGame_PlayerPawnBase_h_16_PRIVATE_PROPERTY_OFFSET \
-	SnakeGame_Source_SnakeGame_PlayerPawnBase_h_16_RPC_WRAPPERS \
-	SnakeGame_Source_SnakeGame_PlayerPawnBase_h_16_INCLASS \
-	SnakeGame_Source_SnakeGame_PlayerPawnBase_h_16_STANDARD_CONSTRUCTORS \
+	SnakeGame_Source_SnakeGame_PlayerPawnBase_h_17_PRIVATE_PROPERTY_OFFSET \
+	SnakeGame_Source_SnakeGame_PlayerPawnBase_h_17_RPC_WRAPPERS \
+	SnakeGame_Source_SnakeGame_PlayerPawnBase_h_17_INCLASS \
+	SnakeGame_Source_SnakeGame_PlayerPawnBase_h_17_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_16_GENERATED_BODY \
+#define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SnakeGame_Source_SnakeGame_PlayerPawnBase_h_16_PRIVATE_PROPERTY_OFFSET \
-	SnakeGame_Source_SnakeGame_PlayerPawnBase_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	SnakeGame_Source_SnakeGame_PlayerPawnBase_h_16_INCLASS_NO_PURE_DECLS \
-	SnakeGame_Source_SnakeGame_PlayerPawnBase_h_16_ENHANCED_CONSTRUCTORS \
+	SnakeGame_Source_SnakeGame_PlayerPawnBase_h_17_PRIVATE_PROPERTY_OFFSET \
+	SnakeGame_Source_SnakeGame_PlayerPawnBase_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	SnakeGame_Source_SnakeGame_PlayerPawnBase_h_17_INCLASS_NO_PURE_DECLS \
+	SnakeGame_Source_SnakeGame_PlayerPawnBase_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -134,12 +134,12 @@ void APlayerPawnBase::AddRandomSuperFoodBP()
 	}
 }
 
-int APlayerPawnBase::GetScore()
-{
-	if (IsValid(SnakeActor))
-	{
-		return SnakeActor->score;
-	}
-	return 0;
-}
+//int APlayerPawnBase::GetScore()
+//{
+//	if (IsValid(SnakeActor))
+//	{
+//		return SnakeActor->score;
+//	}
+//	return 0;
+//}
 

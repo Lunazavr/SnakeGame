@@ -85,6 +85,6 @@ public:
 	//	return GameMode;
 	//}
 
-	UFUNCTION(BlueprintCallable, Category = "SnakePawn")
-		int GetScore();
+	//UFUNCTION(BlueprintCallable, Category = "SnakePawn")
+		//int GetScore();
 };

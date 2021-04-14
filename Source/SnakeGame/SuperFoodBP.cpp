@@ -42,7 +42,7 @@ void ASuperFoodBP::Interact(AActor* Interactor, bool bIsHead)
 		auto Snake = Cast<ASnakeBase>(Interactor);
 		if (IsValid(Snake))
 		{			
-			Snake-> SetActorTickInterval(GetActorTickInterval() * 2);
+			Snake-> SetActorTickInterval(Snake->GetActorTickInterval() * 0.5);
 			ASuperFoodBP::Destroy();
 		}
 	}

@@ -42,7 +42,7 @@ void AFood::Interact(AActor* Interactor, bool bIsHead)
 		if (IsValid(Snake))
 		{
 			Snake->AddSnakeElement();
-			Snake->score++;
+			//Snake->score++;
 			AFood::Destroy();
 		}
 	}

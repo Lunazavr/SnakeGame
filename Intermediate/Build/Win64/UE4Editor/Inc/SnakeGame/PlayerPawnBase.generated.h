@@ -15,14 +15,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_17_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execGetScore) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(int32*)Z_Param__Result=P_THIS->GetScore(); \
-		P_NATIVE_END; \
-	} \
- \
 	DECLARE_FUNCTION(execHandlePlayerHorizontalInput) \
 	{ \
 		P_GET_PROPERTY(UFloatProperty,Z_Param_value); \
@@ -43,14 +35,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 
 #define SnakeGame_Source_SnakeGame_PlayerPawnBase_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
- \
-	DECLARE_FUNCTION(execGetScore) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(int32*)Z_Param__Result=P_THIS->GetScore(); \
-		P_NATIVE_END; \
-	} \
  \
 	DECLARE_FUNCTION(execHandlePlayerHorizontalInput) \
 	{ \

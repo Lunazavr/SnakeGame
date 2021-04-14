@@ -55,5 +55,5 @@ public:
 	UFUNCTION()
 	void SnakeElementOverlap(ASnakeElementBase* OverlappedElement, AActor* Other);
 
-	int score = 0;
+	//int score = 0;
 };

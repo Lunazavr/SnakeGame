@@ -33,8 +33,8 @@ void APlayerPawnBase::BeginPlay()
 void APlayerPawnBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	GetWorld()->SpawnActor<AFood>(FoodActorClass, GetActorTransform());
-	GetWorld()->SpawnActor<ASuperFoodBP>(SuperFoodBPActorClass, GetActorTransform());
+	//GetWorld()->SpawnActor<AFood>(FoodActorClass, GetActorTransform());
+	//GetWorld()->SpawnActor<ASuperFoodBP>(SuperFoodBPActorClass, GetActorTransform());
 	BuferTime += (DeltaTime);
 	if (BuferTime > StepDelay)
 	{
@@ -133,13 +133,4 @@ void APlayerPawnBase::AddRandomSuperFoodBP()
 		}
 	}
 }
-
-//int APlayerPawnBase::GetScore()
-//{
-//	if (IsValid(SnakeActor))
-//	{
-//		return SnakeActor->score;
-//	}
-//	return 0;
-//}
 

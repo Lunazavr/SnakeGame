@@ -77,14 +77,4 @@ public:
 
 	float StepDelaySF = 5.0f; // задержка при движении
 	float BuferTimeSF = 0; // накопитель времени
-
-	//int GameMode = 0; // переменная режима игры
-	//UFUNCTION(BlueprintCallable, Category = "SnakePawn")
-	//int GetGameMode() const
-	//{
-	//	return GameMode;
-	//}
-
-	//UFUNCTION(BlueprintCallable, Category = "SnakePawn")
-		//int GetScore();
 };

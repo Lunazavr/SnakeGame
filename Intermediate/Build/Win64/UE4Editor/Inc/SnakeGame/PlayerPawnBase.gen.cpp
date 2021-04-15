@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawnBase() {}
 	SNAKEGAME_API UClass* Z_Construct_UClass_APlayerPawnBase();
 	ENGINE_API UClass* Z_Construct_UClass_APawn();
 	UPackage* Z_Construct_UPackage__Script_SnakeGame();
+	SNAKEGAME_API UFunction* Z_Construct_UFunction_APlayerPawnBase_GetScore();
 	SNAKEGAME_API UFunction* Z_Construct_UFunction_APlayerPawnBase_HandlePlayerHorizontalInput();
 	SNAKEGAME_API UFunction* Z_Construct_UFunction_APlayerPawnBase_HandlePlayerVerticalInput();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
@@ -29,10 +30,44 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawnBase() {}
 	{
 		UClass* Class = APlayerPawnBase::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "GetScore", &APlayerPawnBase::execGetScore },
 			{ "HandlePlayerHorizontalInput", &APlayerPawnBase::execHandlePlayerHorizontalInput },
 			{ "HandlePlayerVerticalInput", &APlayerPawnBase::execHandlePlayerVerticalInput },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_APlayerPawnBase_GetScore_Statics
+	{
+		struct PlayerPawnBase_eventGetScore_Parms
+		{
+			int32 ReturnValue;
+		};
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UFunction_APlayerPawnBase_GetScore_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(PlayerPawnBase_eventGetScore_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APlayerPawnBase_GetScore_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APlayerPawnBase_GetScore_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerPawnBase_GetScore_Statics::Function_MetaDataParams[] = {
+		{ "Category", "SnakePawn" },
+		{ "ModuleRelativePath", "PlayerPawnBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerPawnBase_GetScore_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerPawnBase, nullptr, "GetScore", sizeof(PlayerPawnBase_eventGetScore_Parms), Z_Construct_UFunction_APlayerPawnBase_GetScore_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_APlayerPawnBase_GetScore_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_APlayerPawnBase_GetScore_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_APlayerPawnBase_GetScore_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_APlayerPawnBase_GetScore()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_APlayerPawnBase_GetScore_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_APlayerPawnBase_HandlePlayerHorizontalInput_Statics
 	{
@@ -146,6 +181,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawnBase() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_SnakeGame,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_APlayerPawnBase_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_APlayerPawnBase_GetScore, "GetScore" }, // 1962069388
 		{ &Z_Construct_UFunction_APlayerPawnBase_HandlePlayerHorizontalInput, "HandlePlayerHorizontalInput" }, // 1158913565
 		{ &Z_Construct_UFunction_APlayerPawnBase_HandlePlayerVerticalInput, "HandlePlayerVerticalInput" }, // 3930890288
 	};
@@ -242,7 +278,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawnBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APlayerPawnBase, 3503407038);
+	IMPLEMENT_CLASS(APlayerPawnBase, 3787178210);
 	template<> SNAKEGAME_API UClass* StaticClass<APlayerPawnBase>()
 	{
 		return APlayerPawnBase::StaticClass();

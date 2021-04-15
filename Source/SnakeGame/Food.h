@@ -33,5 +33,7 @@ public:
 
 	float StepDelay = 5.0f; // задержка до исчезновения
 	float BuferTime = 0; // накопитель времени
+
+	
 };
 

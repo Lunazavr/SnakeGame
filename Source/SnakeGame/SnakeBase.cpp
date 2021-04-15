@@ -20,7 +20,7 @@ void ASnakeBase::BeginPlay()
 {
 	Super::BeginPlay();
 	SetActorTickInterval(MovementSpeed); // раз в сколько секунд змейка будет перемещаться ровно на ElementSize
-	AddSnakeElement(3); // размер змейки в начале игры
+	AddSnakeElement(1); // размер змейки в начале игры
 }
 
 // Called every frame
@@ -94,5 +94,6 @@ void ASnakeBase::SnakeElementOverlap(ASnakeElementBase* OverlappedElement, AActo
 		}
 	}
 }
+
 
 

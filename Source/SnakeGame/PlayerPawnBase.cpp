@@ -134,3 +134,17 @@ void APlayerPawnBase::AddRandomSuperFoodBP()
 	}
 }
 
+int32 APlayerPawnBase::GetScore()
+{
+	if (IsValid(SnakeActor))
+	{
+		return SnakeActor->score;
+	}
+	return 0;
+}
+
+void APlayerPawnBase::SnakeDestroy()
+{
+	if (SnakeActor) SnakeActor->Destroy(true, true);
+}
+

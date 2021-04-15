@@ -39,12 +39,3 @@ void ABarrier::Interact(AActor* Interactor, bool bIsHead)
 	}
 }
 
-//void ABarrier::CollideWall()
-//{
-//	TArray<AActor*> CollectedActors; // массив, куда заносятся все акторы, которые столкнулись
-//	GetOverlappingActors(CollectedActors); // перебор столкнувшихся акторов
-//	for (int i = 0; i < CollectedActors.Num(); ++i)
-//	{
-//		CollectedActors[i]->Destroy(true, true); // всё, что попадает в стену, уничтожается
-//	}
-//}

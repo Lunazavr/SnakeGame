@@ -77,4 +77,9 @@ public:
 
 	float StepDelaySF = 5.0f; // задержка при движении
 	float BuferTimeSF = 0; // накопитель времени
+
+	UFUNCTION(BlueprintCallable, Category = "SnakePawn")
+	int GetScore();
+
+	void SnakeDestroy();
 };
